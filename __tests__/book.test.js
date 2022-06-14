@@ -50,6 +50,15 @@ describe('test routes for books and authors', () => {
     });
   });
 
+  it('POST /books should create a new books', async () => {
+    const resp = await request(app).post('/books').send({
+      title: 'Harry Potter and the Chamber of Secrets',
+      released: 2009,
+    });
+    expect(resp.body.title).toBe('Harry Potter and the Chamber of Secrets');
+    expect(resp.body.released).toBe(2009);
+  });
+
   afterAll(() => {
     pool.end();
   });

@@ -47,6 +47,17 @@ describe('test routes for books and authors', () => {
     });
   });
 
+  it('POST /authors should create a new author', async () => {
+    const resp = await request(app).post('/authors').send({
+      name: 'J.K Rowling',
+      dob: '31-JUL-1965',
+      pob: 'England',
+    });
+    expect(resp.body.name).toBe('J.K. Rowling');
+    expect(resp.body.dob).toBe('31-JUL-1965');
+    expect(resp.body.pob).toBe('England');
+  });
+
   afterAll(() => {
     pool.end();
   });
