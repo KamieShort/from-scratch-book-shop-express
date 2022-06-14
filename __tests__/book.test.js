@@ -43,6 +43,8 @@ describe('test routes for books and authors', () => {
         {
           id: 1,
           name: 'Eli Boschetto',
+          dob: '4-SEP-1989',
+          pob: 'Portland, Oregon',
         },
       ],
     });
