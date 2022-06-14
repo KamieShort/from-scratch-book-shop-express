@@ -12,8 +12,8 @@ CREATE table books (
 );
 
 INSERT INTO books (title, released, author) VALUES
-('Hiking the Pacific Crest Trail', '2016', 'Eli Boschetto'),
+('Hiking the Pacific Crest Trail', 2016, 'Eli Boschetto'),
 ('The Joyful Vegan', 2019, 'Collen Patrick-Goudreau'),
-('The Bullet Journal Method', '2018', 'Ryder Carrol'),
+('The Bullet Journal Method', 2018, 'Ryder Carrol'),
 ('Like a Mother', 2020, 'Angela Garbes');
 
