@@ -34,27 +34,14 @@ describe('test routes for books and authors', () => {
     ]);
   });
 
-  it('/authors should display list of authors', async () => {
-    const res = await request(app).get('/authors');
-
-    expect(res.body).toEqual([
-      {
-        id: '1',
-        name: 'Eli Boschetto',
-      },
-      {
-        id: '2',
-        name: 'Collen Patrick-Goudreau',
-      },
-      {
-        id: '3',
-        name: 'Ryder Carrol',
-      },
-      {
-        id: '4',
-        name: 'Angela Garbes',
-      },
-    ]);
+  it('/books/:id should return book details with authors', async () => {
+    const res = await request(app).get('/books/1');
+    expect(res.body).toEqual({
+      id: '1',
+      title: 'Hiking the Pacific Crest Trail',
+      released: 2016,
+      authors: ('1', 'Eli Boschetto'),
+    });
   });
 
   afterAll(() => {
