@@ -7,13 +7,22 @@ Drop table if exists authors;
 CREATE table books (
     id BIGINT GENERATED ALWAYS AS IDENTITY,
     title VARCHAR NOT NULL,
-    released INT NOT NULL,
-    author VARCHAR NOT NULL
+    released INT NOT NULL
 );
 
-INSERT INTO books (title, released, author) VALUES
-('Hiking the Pacific Crest Trail', 2016, 'Eli Boschetto'),
-('The Joyful Vegan', 2019, 'Collen Patrick-Goudreau'),
-('The Bullet Journal Method', 2018, 'Ryder Carrol'),
-('Like a Mother', 2020, 'Angela Garbes');
+CREATE table authors (
+    id BIGINT GENERATED ALWAYS AS IDENTITY,
+    name VARCHAR NOT NULL,
+    dob INT NOT NULL,
+    pob INT NOT NULL
+);
+
+
+
+
+INSERT INTO books (title, released) VALUES
+('Hiking the Pacific Crest Trail', 2016),
+('The Joyful Vegan', 2019),
+('The Bullet Journal Method', 2018),
+('Like a Mother', 2020);
 

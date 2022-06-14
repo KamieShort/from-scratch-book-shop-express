@@ -16,15 +16,15 @@ Start with the entities/resources that don’t depend on other resources: Book, 
 
 ## Rubric
 
-GET /books route returns list of books 2
+X GET /books route returns list of books 2
 GET /books/:id route returns book detail with authors 2
 POST /books/:id route adds a new book 2
 Book routes properly delegate database work to the model 2
 All book routes tested 1
-Book routes built vertically 1
+X Book routes built vertically 1
 GET /authors route returns list of authors 2
 GET /authors/:id route returns author detail with books 2
 POST /authors/:id route adds a new author 2
 Authors routes properly delegate database work to the model 2
 All authors routes tested 1
-Authors routes built vertically 1 |
+X Authors routes built vertically 1
