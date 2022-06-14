@@ -17,3 +17,6 @@ POST /authors/:id route adds a new author 2
 X Authors routes properly delegate database work to the model 2
 All authors routes tested 1
 X Authors routes built vertically 1
+
+
+  FILTER (WHERE authors.id IS NOT NULL), '[]') 
