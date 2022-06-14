@@ -13,8 +13,8 @@ CREATE table books (
 CREATE table authors (
     id BIGINT GENERATED ALWAYS AS IDENTITY,
     name VARCHAR NOT NULL,
-    dob INT NOT NULL,
-    pob INT NOT NULL
+    dob VARCHAR NOT NULL,
+    pob VARCHAR NOT NULL
 );
 
 
@@ -25,4 +25,10 @@ INSERT INTO books (title, released) VALUES
 ('The Joyful Vegan', 2019),
 ('The Bullet Journal Method', 2018),
 ('Like a Mother', 2020);
+
+INSERT INTO authors (name, dob, pob) VALUES
+('Eli Boschetto', '4-SEP-1989', 'Portland, Oregon'),
+('Collen Patrick-Goudreau', '6-JUN-1977', 'San Francisco, California'),
+('Ryder Carrol', '13-MAR-1978', 'Portland, Maine'),
+('Angela Garbes', '24-JUL-1983', 'Seattle, Washington');
 
