@@ -12,22 +12,22 @@ describe('test routes for books and authors', () => {
 
     expect(res.body).toEqual([
       {
-        id: 1,
+        id: '1',
         title: 'Hiking the Pacific Crest Trail',
         released: 2016,
       },
       {
-        id: 2,
+        id: '2',
         title: 'The Joyful Vegan',
         released: 2019,
       },
       {
-        id: 3,
+        id: '3',
         title: 'The Bullet Journal Method',
         released: 2018,
       },
       {
-        id: 4,
+        id: '4',
         title: 'Like a Mother',
         released: 2020,
       },
