@@ -31,6 +31,22 @@ describe('test routes for books and authors', () => {
     ]);
   });
 
+  it('/authors/:id should return author details with books', async () => {
+    const res = await request(app).get('/authors/1');
+    expect(res.body).toEqual({
+      name: 'Eli Boschetto',
+      dob: '4-SEP-1989',
+      pob: 'Portland, Oregon',
+      books: [
+        {
+          id: 1,
+          title: 'Hiking the Pacific Crest Trail',
+          released: 2016,
+        },
+      ],
+    });
+  });
+
   afterAll(() => {
     pool.end();
   });

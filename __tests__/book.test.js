@@ -37,15 +37,12 @@ describe('test routes for books and authors', () => {
   it('/books/:id should return book details with authors', async () => {
     const res = await request(app).get('/books/1');
     expect(res.body).toEqual({
-      id: '1',
       title: 'Hiking the Pacific Crest Trail',
       released: 2016,
       authors: [
         {
           id: 1,
           name: 'Eli Boschetto',
-          dob: '4-SEP-1989',
-          pob: 'Portland, Oregon',
         },
       ],
     });
