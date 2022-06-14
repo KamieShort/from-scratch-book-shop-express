@@ -33,6 +33,38 @@ describe('test routes for books and authors', () => {
       },
     ]);
   });
+
+  it('/authors should display list of authors', async () => {
+    const res = await request(app).get('/authors');
+
+    expect(res.body).toEqual([
+      {
+        id: '1',
+        name: 'Eli Boschetto',
+        dob: '4-SEP-1989',
+        pob: 'Portland, Oregon',
+      },
+      {
+        id: '2',
+        name: 'Collen Patrick-Goudreau',
+        dob: '6-JUN-1977',
+        pob: 'San Francisco, California',
+      },
+      {
+        id: '3',
+        name: 'Ryder Carrol',
+        dob: '13-MAR-1978',
+        pob: 'Portland, Maine',
+      },
+      {
+        id: '4',
+        name: 'Angela Garbes',
+        dob: '24-JUL-1983',
+        pob: 'Seattle, Washington',
+      },
+    ]);
+  });
+
   afterAll(() => {
     pool.end();
   });
