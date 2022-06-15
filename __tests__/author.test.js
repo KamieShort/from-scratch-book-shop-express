@@ -49,7 +49,7 @@ describe('test routes for books and authors', () => {
 
   it('POST /authors should create a new author', async () => {
     const resp = await request(app).post('/authors').send({
-      name: 'J.K Rowling',
+      name: 'J.K. Rowling',
       dob: '31-JUL-1965',
       pob: 'England',
     });
